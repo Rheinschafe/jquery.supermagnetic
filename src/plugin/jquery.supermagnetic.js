@@ -31,7 +31,7 @@ const config = {
 /* ---------- TEMPLATES ---------- */
 
 const filterTemplate = () => `
-	<div class="smgt-filter clearfix">
+	<div class="smgt-filter">
         <div class="smgt-filter-types">
         </div>
         <div class="smgt-filter-sources">
@@ -68,7 +68,7 @@ const instagramFilterOptionTemplate = () => `
 `;
 
 const gridTemplate = () => `
-    <div class="grid"></div>
+    <div class="grid smgt-grid"></div>
 `;
 
 const imageTileTemplate = (tileData, options) => `
@@ -99,7 +99,7 @@ const imageUploadTileTemplate = (tileData, options) => `
 					</div>
 					<div class="smgt-meta">
 						<p>${tileData.date}</p>
-						<p> </p>						
+						<p> </p>
 					</div>
 				</footer>
 			</div>

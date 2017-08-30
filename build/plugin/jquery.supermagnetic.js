@@ -36,7 +36,7 @@ var config = {
 /* ---------- TEMPLATES ---------- */
 
 var filterTemplate = function filterTemplate() {
-    return '\n\t<div class="smgt-filter clearfix">\n        <div class="smgt-filter-types">\n        </div>\n        <div class="smgt-filter-sources">\n        </div>\n    </div>\n\t';
+    return '\n\t<div class="smgt-filter">\n        <div class="smgt-filter-types">\n        </div>\n        <div class="smgt-filter-sources">\n        </div>\n    </div>\n\t';
 };
 
 var videoFilterOptionTemplate = function videoFilterOptionTemplate() {
@@ -68,7 +68,7 @@ var instagramFilterOptionTemplate = function instagramFilterOptionTemplate() {
 };
 
 var gridTemplate = function gridTemplate() {
-    return '\n    <div class="grid"></div>\n';
+    return '\n    <div class="grid smgt-grid"></div>\n';
 };
 
 var imageTileTemplate = function imageTileTemplate(tileData, options) {
@@ -76,7 +76,7 @@ var imageTileTemplate = function imageTileTemplate(tileData, options) {
 };
 
 var imageUploadTileTemplate = function imageUploadTileTemplate(tileData, options) {
-    return '\n    \t<div class="grid-item grid-item-' + options.gridCols + '-col" style="padding:' + options.gridColGap + 'px">\n\t\t\t<div class="smgt-tile smgt-tile-image-upload">\n\t\t\t\t<img src="' + tileData.imageSource + '"/>\n\t\t\t\t<footer>\n\t\t\t\t\t<div class="smgt-media-icon">\n\t\t\t\t\t\t<i class="fa fa-picture-o" aria-hidden="true"></i>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="smgt-meta">\n\t\t\t\t\t\t<p>' + tileData.date + '</p>\n\t\t\t\t\t\t<p> </p>\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t</footer>\n\t\t\t</div>\n\t</div>\n';
+    return '\n    \t<div class="grid-item grid-item-' + options.gridCols + '-col" style="padding:' + options.gridColGap + 'px">\n\t\t\t<div class="smgt-tile smgt-tile-image-upload">\n\t\t\t\t<img src="' + tileData.imageSource + '"/>\n\t\t\t\t<footer>\n\t\t\t\t\t<div class="smgt-media-icon">\n\t\t\t\t\t\t<i class="fa fa-picture-o" aria-hidden="true"></i>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="smgt-meta">\n\t\t\t\t\t\t<p>' + tileData.date + '</p>\n\t\t\t\t\t\t<p> </p>\n\t\t\t\t\t</div>\n\t\t\t\t</footer>\n\t\t\t</div>\n\t</div>\n';
 };
 
 var textTileTemplate = function textTileTemplate(tileData, options) {
