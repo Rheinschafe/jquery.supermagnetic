@@ -155,6 +155,7 @@ const detailViewTemplate = () => `
           <i class="fa fa-circle fa-stack-2x"></i>
           <i class="fa fa-play fa-stack-1x"></i>
         </span>
+        <p class="smgt-detail-overlay-description"></p>
       </div>
       <div class="smgt-detail-video">
         <iframe class="smgt-video" src="" frameborder="0" />
@@ -267,6 +268,10 @@ const detailViewTemplate = () => `
 
         showDetailView(item) {
             // change detailview element
+            $('.smgt-detail-overlay-description').text('');
+            $('.smgt-detail-description').text('');
+            $('.smgt-detail-image').css('background-color', '#fff');
+            $('.smgt-detail-video').hide();
             $('.smgt-detail-image').unbind('click');
             if (item.type == 'video') $('.smgt-detail-view .fa').fadeIn('fast');
             if (item.type == 'video' && item.service == 'youtube') {
@@ -275,7 +280,7 @@ const detailViewTemplate = () => `
                 $('.smgt-detail-video .smgt-video').css('display', 'block');
                 $('.smgt-detail-video .smgt-video').attr('src', 'https://www.youtube.com/embed/' + item.external_id);
             }
-            if (item.service == 'instagram') {
+            if (item.service == 'instagram' && item.type == 'video') {
                 $('.smgt-detail-video').css('display', 'none');
                 $('.smgt-detail-image').addClass('video-preview');
                 $('.smgt-detail-image').css('display', 'block');
@@ -293,6 +298,7 @@ const detailViewTemplate = () => `
             } else if (item.type = 'text') {
                 let color = '#fff';
                 if (item.service === 'twitter') { color = '#55ACEE'};
+                if (item.service === 'facebook') { color = '#3b5998'};
                 $('.smgt-detail-image').css('background-color', color);
             }
 
@@ -301,7 +307,14 @@ const detailViewTemplate = () => `
                 $('.smgt-detail-meta a').hide();
             }
 
-            $('.smgt-detail-description').text(item.text);
+            if (item.type != 'text' || item.service == 'instagram') {
+                $('.smgt-detail-description').text(item.text);
+            } else if (item.type == 'text') {
+                $('.smgt-detail-overlay-description').text(item.text);
+            }
+
+            console.log(item);
+
             $('.smgt-detail-meta a').prop("href", item.url);
 
             // show detail view
