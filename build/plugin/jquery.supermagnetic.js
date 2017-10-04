@@ -208,7 +208,7 @@ var detailViewTemplate = function detailViewTemplate() {
                     $('.smgt-detail-image').css('display', 'none');
                     $('.smgt-detail-video').css('display', 'block');
                     $('.smgt-detail-video .smgt-video').css('display', 'block');
-                    $('.smgt-detail-video .smgt-video').attr('src', 'http://www.youtube.com/embed/' + item.external_id);
+                    $('.smgt-detail-video .smgt-video').attr('src', 'https://www.youtube.com/embed/' + item.external_id);
                 }
                 if (item.service == 'instagram') {
                     $('.smgt-detail-video').css('display', 'none');
