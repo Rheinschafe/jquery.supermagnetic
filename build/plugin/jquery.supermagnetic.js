@@ -241,7 +241,7 @@ var detailViewTemplate = function detailViewTemplate() {
                 }
 
                 $('.smgt-detail-meta a').show();
-                if (item.type == 'image' && !item.service) {
+                if (item.type == 'image' && !item.service || !item.url) {
                     $('.smgt-detail-meta a').hide();
                 }
 
@@ -250,8 +250,6 @@ var detailViewTemplate = function detailViewTemplate() {
                 } else if (item.type == 'text') {
                     $('.smgt-detail-overlay-description').text(item.text);
                 }
-
-                console.log(item);
 
                 $('.smgt-detail-meta a').prop("href", item.url);
 
