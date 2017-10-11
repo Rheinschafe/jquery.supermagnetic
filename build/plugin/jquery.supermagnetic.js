@@ -202,6 +202,7 @@ var detailViewTemplate = function detailViewTemplate() {
             key: 'showDetailView',
             value: function showDetailView(item) {
                 // change detailview element
+                $('.smgt-detail-image').css('display', 'block');
                 $('.smgt-detail-overlay-description').text('');
                 $('.smgt-detail-description').text('');
                 $('.smgt-detail-image').css('background-color', '#fff');
