@@ -19,19 +19,19 @@ But with this jquery plugin you can get started within 5 minutes. It offers a ba
  - jQuery
  - Masonry, http://masonry.desandro.com/, for the magic grid stuff
 
-You need to include them on your own, but can have look at the example.html: https://htmlpreview.github.io/?https://github.com/huersch/jquery.supermagnetic/blob/master/build/example.html
+You need to include them on your own, but can have look at the example.html: https://htmlpreview.github.io/?https://github.com/rheinschafe/jquery.supermagnetic/blob/master/build/example.html
 
 ## How to use ##
 
 Using the plugin is very straight forward:
 
- - Include the js libraries and example css. 
+ - Include the js libraries and example css.
  - Call the SupermagneticFeed()-Function on the container you like to display
  - configure output
- 
+
 ### Parameters ###
 
-You can call SupermagneticFeed without any paramater just like this: 
+You can call SupermagneticFeed without any paramater just like this:
 `$('.container').SupermagneticFeed()`
 It will generate a marketing feed of our own. To use it with your own feeds you have to at least specify 'feedId' and 'token'
 
